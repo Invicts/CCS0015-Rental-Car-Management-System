@@ -1,1 +1,2 @@
 25,NKK1230,Ford,Territory,SUV,0,1324,1,
+26,XYZ999,Toyota,Fortuner,SUV,0,120,1,
