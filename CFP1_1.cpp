@@ -1232,23 +1232,44 @@ int main()
 
             case 10: {
                 Customer customer;
-
                 int id, phone;
                 string name, email;
 
                 cout << "Customer ID: ";
                 cin >> id;
-                cin.ignore();
+                if (cin.fail() || id <= 0) {
+                    cin.clear();
+                    cin.ignore(1000, '\n');
+                    cout << "Invalid Customer ID.\n";
+                    break;
+                }
+
+                cin.ignore(1000, '\n');
 
                 cout << "Name: ";
                 getline(cin, name);
+                if (name.empty()) {
+                    cout << "Name cannot be empty.\n";
+                    break;
+                }
 
                 cout << "Phone: ";
                 cin >> phone;
-                cin.ignore();
+                if (cin.fail() || phone <= 0) {
+                    cin.clear();
+                    cin.ignore(1000, '\n');
+                    cout << "Invalid phone number.\n";
+                    break;
+                }
+
+                cin.ignore(1000, '\n');
 
                 cout << "Email: ";
                 getline(cin, email);
+                if (email.empty()) {
+                    cout << "Email cannot be empty.\n";
+                    break;
+                }
 
                 customer.setCustomerID(id);
                 customer.setName(name);
@@ -1256,7 +1277,6 @@ int main()
                 customer.setEmail(email);
 
                 system.addCustomer(customer);
-
                 break;
             }
 
