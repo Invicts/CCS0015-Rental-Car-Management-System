@@ -71,7 +71,7 @@ The project demonstrates the application of Data Structures and Algorithms conce
 
 ---
 
-## Technologies
+## Tech Stack
 
 - C++
 - Visual Studio Code
@@ -90,10 +90,5 @@ The system stores data using text files:
 
 ---
 
-## Team Members
-
-- Jay (Project Lead)
-- Member 2
-- Member 3
-- Member 4
-- Member 5
+Repository Admin
+- Jay Marc P. Oroceo, Testing and Debugging
